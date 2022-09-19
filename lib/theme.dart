@@ -6,6 +6,7 @@ Color yellow = Colors.amber;
 Color black = Colors.black45;
 Color card_white = Color(0xffffffff);
 Color red = Color(0xFFFE4A49);
+Color grey = Colors.grey;
 
 TextStyle todoTitleStyle = GoogleFonts.poppins(
   fontSize: 36,

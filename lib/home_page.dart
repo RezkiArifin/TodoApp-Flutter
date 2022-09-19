@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:todolist_app/models/task.dart';
 import 'package:todolist_app/theme.dart';
 import 'package:todolist_app/widgets/card_widget.dart';
+import 'package:todolist_app/widgets/form_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -156,7 +157,16 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showDialog(
+            context: context,
+            builder: (context) {
+              return FormWidget(
+                addFunction: addTask,
+              );
+            },
+          );
+        },
         backgroundColor: blue,
         foregroundColor: card_white,
         child: const Icon(
